@@ -1,0 +1,1711 @@
+
+/* =========================================================
+   HOME
+========================================================= */
+
+.home {
+  width: 100%;
+  overflow: hidden;
+  background: #0b1020;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+  position: relative;
+  min-height: calc(100vh - 104px);
+  margin-top: 104px;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 72% 48%,
+      rgba(25, 191, 255, 0.08),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 20% 70%,
+      rgba(255, 122, 0, 0.04),
+      transparent 25%
+    ),
+    #0b1020;
+}
+
+/* =========================================================
+   GRID AND GLOW
+========================================================= */
+
+.hero-grid {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(25, 191, 255, 0.055) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(25, 191, 255, 0.055) 1px,
+      transparent 1px
+    );
+
+  background-size: 55px 55px;
+
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 15%,
+    black 80%,
+    transparent
+  );
+
+  opacity: 0.65;
+}
+
+.hero-glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(80px);
+}
+
+.hero-glow-blue {
+  width: 400px;
+  height: 400px;
+  right: 15%;
+  top: 20%;
+  background: rgba(25, 191, 255, 0.08);
+  animation: backgroundPulse 5s ease-in-out infinite;
+}
+
+.hero-glow-orange {
+  width: 280px;
+  height: 280px;
+  left: 8%;
+  bottom: 10%;
+  background: rgba(255, 122, 0, 0.045);
+  animation: backgroundPulse 6s ease-in-out infinite reverse;
+}
+
+@keyframes backgroundPulse {
+  0%, 100% {
+    transform: scale(0.9);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   SCAN LINE
+========================================================= */
+
+.scan-line {
+  position: absolute;
+  left: 0;
+  top: -5%;
+  width: 100%;
+  height: 1px;
+  z-index: 2;
+  pointer-events: none;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(25, 191, 255, 0.35),
+    rgba(25, 191, 255, 0.8),
+    rgba(25, 191, 255, 0.35),
+    transparent
+  );
+
+  box-shadow:
+    0 0 10px rgba(25, 191, 255, 0.5),
+    0 0 25px rgba(25, 191, 255, 0.25);
+
+  animation: scanMove 7s linear infinite;
+}
+
+@keyframes scanMove {
+  0% {
+    top: -5%;
+    opacity: 0;
+  }
+
+  10%, 90% {
+    opacity: 1;
+  }
+
+  100% {
+    top: 105%;
+    opacity: 0;
+  }
+}
+
+/* =========================================================
+   PARTICLES
+========================================================= */
+
+.particles {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.particles span {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #19bfff;
+
+  box-shadow: 0 0 8px rgba(25, 191, 255, 0.8);
+
+  opacity: 0;
+  animation: particleFloat 6s infinite ease-in-out;
+}
+
+.particles span:nth-child(1) {
+  left: 8%;
+  top: 35%;
+}
+
+.particles span:nth-child(2) {
+  left: 18%;
+  top: 65%;
+  animation-delay: 1s;
+}
+
+.particles span:nth-child(3) {
+  left: 29%;
+  top: 25%;
+  animation-delay: 2s;
+}
+
+.particles span:nth-child(4) {
+  left: 41%;
+  top: 75%;
+  animation-delay: 3s;
+}
+
+.particles span:nth-child(5) {
+  left: 53%;
+  top: 32%;
+  animation-delay: 1.5s;
+}
+
+.particles span:nth-child(6) {
+  left: 63%;
+  top: 70%;
+  animation-delay: 2.5s;
+}
+
+.particles span:nth-child(7) {
+  left: 73%;
+  top: 22%;
+  animation-delay: 4s;
+}
+
+.particles span:nth-child(8) {
+  left: 82%;
+  top: 60%;
+  animation-delay: 1s;
+}
+
+.particles span:nth-child(9) {
+  left: 91%;
+  top: 38%;
+  animation-delay: 3.5s;
+}
+
+.particles span:nth-child(10) {
+  left: 47%;
+  top: 15%;
+  animation-delay: 4.5s;
+}
+
+.particles span:nth-child(11) {
+  left: 14%;
+  top: 15%;
+  animation-delay: 2.8s;
+}
+
+.particles span:nth-child(12) {
+  left: 87%;
+  top: 80%;
+  animation-delay: 5s;
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translateY(20px) scale(0.5);
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: translateY(-20px) scale(1);
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateY(-50px) scale(0.3);
+    opacity: 0;
+  }
+}
+
+/* =========================================================
+   CYBER LINES
+========================================================= */
+
+.cyber-line {
+  position: absolute;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(25, 191, 255, 0.5),
+    transparent
+  );
+
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.cyber-line-1 {
+  width: 380px;
+  top: 28%;
+  right: -80px;
+  transform: rotate(-35deg);
+}
+
+.cyber-line-2 {
+  width: 280px;
+  left: -80px;
+  bottom: 25%;
+  transform: rotate(35deg);
+}
+
+/* =========================================================
+   HERO CONTAINER
+========================================================= */
+
+.hero-container {
+  position: relative;
+  z-index: 5;
+
+  width: min(1250px, calc(100% - 100px));
+  min-height: calc(100vh - 104px);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 0.85fr;
+  align-items: center;
+  gap: 50px;
+}
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  min-width: 0;
+  padding-bottom: 30px;
+}
+
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+
+  color: #19bfff;
+  font-family: "Orbitron", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.eyebrow-line {
+  flex-shrink: 0;
+  width: 35px;
+  height: 2px;
+  background: #19bfff;
+
+  box-shadow: 0 0 8px rgba(25, 191, 255, 0.7);
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.hero h1 {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+
+  color: #f5f7fa;
+  font-family: "Orbitron", sans-serif;
+  font-size: clamp(28px, 4.5vw, 65px);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -2px;
+}
+
+.hero h1 span {
+  color: #19bfff;
+
+  text-shadow: 0 0 18px rgba(25, 191, 255, 0.18);
+
+  animation: titleGlow 3s ease-in-out infinite;
+}
+
+@keyframes titleGlow {
+  0%, 100% {
+    text-shadow: 0 0 12px rgba(25, 191, 255, 0.1);
+  }
+
+  50% {
+    text-shadow:
+      0 0 22px rgba(25, 191, 255, 0.3),
+      0 0 45px rgba(25, 191, 255, 0.08);
+  }
+}
+
+/* =========================================================
+   TAGLINE AND DESCRIPTION
+========================================================= */
+
+.hero-tagline {
+  margin: 28px 0 12px;
+  color: #fff;
+  font-family: "Orbitron", sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.hero-description {
+  max-width: 540px;
+  margin: 0;
+  color: #9daabd;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.start-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  min-width: 190px;
+  padding: 14px 22px;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  border-radius: 10px;
+  background: #ff7a00;
+  color: #08101f;
+  text-decoration: none;
+
+  font-family: "Orbitron", sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+
+  box-shadow: 0 0 20px rgba(255, 122, 0, 0.15);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.start-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+  animation: buttonSweep 4s ease-in-out infinite;
+}
+
+.start-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 30px rgba(255, 122, 0, 0.35);
+}
+
+@keyframes buttonSweep {
+  0%, 55% {
+    left: -120%;
+  }
+
+  75%, 100% {
+    left: 150%;
+  }
+}
+
+.byte-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+
+  padding: 13px 23px;
+  border: 1px solid rgba(25, 191, 255, 0.65);
+  border-radius: 10px;
+
+  background: rgba(25, 191, 255, 0.03);
+  color: #19bfff;
+  text-decoration: none;
+
+  font-family: "Orbitron", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  transition:
+    background 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.byte-button:hover {
+  background: rgba(25, 191, 255, 0.1);
+  box-shadow: 0 0 20px rgba(25, 191, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+/* =========================================================
+   HERO NOTE
+========================================================= */
+
+.hero-note {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 30px;
+
+  color: #66758c;
+  font-family: "Orbitron", sans-serif;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+.note-dot {
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #54d68a;
+
+  box-shadow: 0 0 8px rgba(84, 214, 138, 0.6);
+  animation: notePulse 1.8s infinite;
+}
+
+@keyframes notePulse {
+  0%, 100% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   BYTE AREA
+   DESKTOP CHARACTER SIZE PRESERVED
+========================================================= */
+
+.byte-area {
+  position: relative;
+  min-width: 0;
+  min-height: 350px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================================
+   BYTE GLOW
+========================================================= */
+
+.byte-glow {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(25, 191, 255, 0.17),
+    rgba(25, 191, 255, 0.03) 45%,
+    transparent 70%
+  );
+
+  filter: blur(10px);
+  animation: byteGlowPulse 4s ease-in-out infinite;
+}
+
+@keyframes byteGlowPulse {
+  0%, 100% {
+    transform: scale(0.95);
+    opacity: 0.55;
+  }
+
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   BYTE RINGS
+========================================================= */
+
+.byte-ring {
+  position: absolute;
+  width: 410px;
+  height: 410px;
+
+  border: 1px solid rgba(25, 191, 255, 0.13);
+  border-radius: 50%;
+
+  box-shadow: 0 0 50px rgba(25, 191, 255, 0.04);
+
+  animation: byteRing 8s linear infinite;
+  pointer-events: none;
+}
+
+.byte-ring::before {
+  content: "";
+  position: absolute;
+  inset: 25px;
+  border: 1px dashed rgba(25, 191, 255, 0.12);
+  border-radius: 50%;
+}
+
+.byte-ring-outer {
+  width: 480px;
+  height: 480px;
+  border-style: dashed;
+  border-color: rgba(255, 122, 0, 0.12);
+  animation: byteOuterRing 15s linear infinite;
+}
+
+@keyframes byteRing {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes byteOuterRing {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+/* =========================================================
+   BYTE CHARACTER
+   DO NOT CHANGE THESE DESKTOP DIMENSIONS
+========================================================= */
+
+.byte-character {
+  position: relative;
+  z-index: 4;
+
+  width: 100%;
+  max-width: 470px;
+  height: 450px;
+  max-height: 500px;
+
+  object-fit: contain;
+
+  filter: drop-shadow(0 0 25px rgba(25, 191, 255, 0.2));
+
+  animation:
+    byteFloat 4s ease-in-out infinite,
+    byteBreathing 5s ease-in-out infinite;
+}
+
+@keyframes byteFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes byteBreathing {
+  0%, 100% {
+    filter: drop-shadow(0 0 18px rgba(25, 191, 255, 0.1));
+  }
+
+  50% {
+    filter: drop-shadow(0 0 30px rgba(25, 191, 255, 0.3));
+  }
+}
+
+/* =========================================================
+   ORBIT DOTS
+========================================================= */
+
+.orbit-dot {
+  position: absolute;
+  z-index: 6;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+
+  background: #19bfff;
+
+  box-shadow:
+    0 0 10px rgba(25, 191, 255, 0.9),
+    0 0 20px rgba(25, 191, 255, 0.4);
+
+  pointer-events: none;
+}
+
+.orbit-dot-1 {
+  top: 24%;
+  left: 27%;
+  animation: orbitOne 6s linear infinite;
+}
+
+.orbit-dot-2 {
+  right: 17%;
+  top: 48%;
+  width: 6px;
+  height: 6px;
+  background: #ff7a00;
+  box-shadow: 0 0 10px rgba(255, 122, 0, 0.9);
+  animation: orbitTwo 7s linear infinite;
+}
+
+.orbit-dot-3 {
+  bottom: 20%;
+  left: 34%;
+  width: 5px;
+  height: 5px;
+  animation: orbitThree 8s linear infinite;
+}
+
+@keyframes orbitOne {
+  0% {
+    transform: rotate(0deg) translateX(200px) rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg) translateX(200px) rotate(-360deg);
+  }
+}
+
+@keyframes orbitTwo {
+  0% {
+    transform: rotate(360deg) translateX(180px) rotate(-360deg);
+  }
+
+  100% {
+    transform: rotate(0deg) translateX(180px) rotate(0deg);
+  }
+}
+
+@keyframes orbitThree {
+  0% {
+    transform: rotate(0deg) translateX(150px);
+  }
+
+  100% {
+    transform: rotate(360deg) translateX(150px);
+  }
+}
+
+/* =========================================================
+   BYTE MESSAGE
+========================================================= */
+
+.byte-message {
+  position: absolute;
+  z-index: 10;
+
+  top: 18%;
+  right: 0;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+
+  /* width: 180px;
+  max-width: 180px; */
+  /* box-sizing: border-box;
+  padding: 14px 15px;
+
+  border: 1px solid rgba(25, 191, 255, 0.25);
+  border-radius: 14px; */
+
+  background: rgba(7, 18, 38, 0.88);
+  backdrop-filter: blur(12px);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+  animation: messageFloat 3.5s ease-in-out infinite;
+}
+
+.message-dot {
+  flex-shrink: 0;
+  width: 7px;
+  height: 7px;
+  margin-top: 5px;
+  border-radius: 50%;
+
+  background: #ff7a00;
+  box-shadow: 0 0 8px rgba(255, 122, 0, 0.6);
+
+  animation: messagePulse 1.8s ease-in-out infinite;
+}
+
+.byte-message strong {
+  display: block;
+  color: #19bfff;
+  font-family: "Orbitron", sans-serif;
+  font-size: 10px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.byte-message p {
+  margin: 7px 0 0;
+  color: #d9e4f1;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+}
+
+@keyframes messageFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes messagePulse {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+    box-shadow: 0 0 12px rgba(255, 122, 0, 0.9);
+  }
+}
+
+/* =========================================================
+   HUD
+========================================================= */
+
+.byte-hud {
+  position: absolute;
+  z-index: 12;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px 12px;
+  border-left: 2px solid #19bfff;
+
+  background: rgba(5, 15, 31, 0.65);
+  color: #6f8198;
+
+  font-family: "Orbitron", sans-serif;
+  font-size: 7px;
+  letter-spacing: 1.5px;
+
+  backdrop-filter: blur(8px);
+}
+
+.hud-top {
+  top: 12%;
+  left: 5%;
+}
+
+.hud-bottom {
+  right: 5%;
+  bottom: 15%;
+  border-left: none;
+  border-right: 2px solid #ff7a00;
+}
+
+.hud-bottom span {
+  color: #54d68a;
+}
+
+.hud-dot {
+  flex-shrink: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #54d68a;
+
+  box-shadow: 0 0 7px rgba(84, 214, 138, 0.8);
+  animation: hudBlink 1.5s infinite;
+}
+
+@keyframes hudBlink {
+  0%, 100% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   FLOATING SYMBOLS
+========================================================= */
+
+.floating-symbol {
+  position: absolute;
+  z-index: 3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 45px;
+  height: 45px;
+
+  border: 1px solid rgba(25, 191, 255, 0.14);
+  border-radius: 12px;
+
+  background: rgba(25, 191, 255, 0.025);
+  color: rgba(25, 191, 255, 0.6);
+
+  backdrop-filter: blur(5px);
+
+  animation:
+    symbolFloat 5s ease-in-out infinite,
+    symbolGlow 3s ease-in-out infinite;
+}
+
+.symbol-1 {
+  top: 23%;
+  left: 8%;
+}
+
+.symbol-2 {
+  right: 7%;
+  bottom: 22%;
+  animation-delay: 1.5s;
+}
+
+.symbol-3 {
+  left: 45%;
+  top: 16%;
+  animation-delay: 3s;
+}
+
+.symbol-4 {
+  right: 18%;
+  top: 28%;
+  color: rgba(84, 214, 138, 0.7);
+  border-color: rgba(84, 214, 138, 0.15);
+  animation-delay: 1.5s;
+}
+
+.symbol-5 {
+  left: 38%;
+  bottom: 17%;
+  color: #ff7a00;
+  border-color: rgba(255, 122, 0, 0.18);
+  animation-delay: 2.5s;
+}
+
+.symbol-6 {
+  right: 4%;
+  top: 42%;
+  color: rgba(25, 191, 255, 0.7);
+  font-family: "Orbitron", sans-serif;
+  font-size: 13px;
+  animation-delay: 3.5s;
+}
+
+@keyframes symbolFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes symbolGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 rgba(25, 191, 255, 0);
+  }
+
+  50% {
+    box-shadow: 0 0 18px rgba(25, 191, 255, 0.1);
+  }
+}
+
+/* =========================================================
+   SCROLL INDICATOR
+========================================================= */
+
+.scroll-indicator {
+  position: absolute;
+  z-index: 10;
+  bottom: 25px;
+  left: 50%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  color: #53637a;
+  font-family: "Orbitron", sans-serif;
+  font-size: 7px;
+  letter-spacing: 2px;
+
+  transform: translateX(-50%);
+}
+
+.scroll-line {
+  width: 50px;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #19bfff,
+    transparent
+  );
+
+  animation: scrollPulse 2s infinite;
+}
+
+@keyframes scrollPulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scaleX(0.7);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+/* =========================================================
+   CYBER CORNERS
+========================================================= */
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  width: 70px;
+  height: 70px;
+
+  border-top: 1px solid rgba(25, 191, 255, 0.3);
+  border-left: 1px solid rgba(25, 191, 255, 0.3);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  width: 70px;
+  height: 70px;
+
+  border-right: 1px solid rgba(255, 122, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 122, 0, 0.3);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* =========================================================
+   INTRO SECTION
+========================================================= */
+
+.intro-section {
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 100px 30px;
+
+  background: #090f1e;
+  border-top: 1px solid rgba(25, 191, 255, 0.08);
+}
+
+.intro-content {
+  max-width: 700px;
+  text-align: center;
+}
+
+.section-label {
+  color: #ff7a00;
+  font-family: "Orbitron", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.intro-content h2 {
+  margin: 18px 0;
+  color: #f5f7fa;
+  font-family: "Orbitron", sans-serif;
+  font-size: clamp(35px, 5vw, 60px);
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.intro-content h2 span {
+  display: block;
+  color: #19bfff;
+}
+
+.intro-content p {
+  color: #8998ad;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+  .hero-container {
+    width: calc(100% - 60px);
+    grid-template-columns: 1fr 0.8fr;
+    gap: 25px;
+  }
+
+  .hero h1 {
+    font-size: clamp(48px, 7vw, 72px);
+  }
+
+  .hero-tagline {
+    font-size: 18px;
+  }
+
+  .hero-description {
+    max-width: 480px;
+  }
+
+  .byte-area {
+    min-height: 500px;
+  }
+
+  .byte-ring {
+    width: 330px;
+    height: 330px;
+  }
+
+  .byte-ring-outer {
+    width: 390px;
+    height: 390px;
+  }
+
+  .byte-glow {
+    width: 330px;
+    height: 330px;
+  }
+
+  .byte-message {
+    right: -5px;
+    max-width: 190px;
+  }
+
+  .byte-hud {
+    font-size: 6px;
+  }
+
+  .cyber-line-1 {
+    right: -150px;
+  }
+
+  .cyber-line-2 {
+    left: -150px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+  .hero {
+    margin-top: 72px;
+    min-height: auto;
+    padding: 55px 0 80px;
+  }
+
+  .hero-container {
+    width: calc(100% - 30px);
+    min-height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+  }
+
+  .hero-content {
+    width: 100%;
+    min-width: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-eyebrow {
+    justify-content: center;
+    gap: 9px;
+    margin-bottom: 15px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .eyebrow-line {
+    width: 25px;
+  }
+
+  .hero h1 {
+    width: 100%;
+    font-size: clamp(42px, 14vw, 62px);
+    line-height: 0.95;
+    letter-spacing: -1.5px;
+  }
+
+  .hero-tagline {
+    margin: 22px 0 10px;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .hero-description {
+    width: 100%;
+    max-width: 430px;
+    padding: 0 5px;
+    box-sizing: border-box;
+    font-size: 12.5px;
+    line-height: 1.75;
+  }
+
+  .hero-buttons {
+    width: 100%;
+    max-width: 290px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    margin-top: 25px;
+  }
+
+  .start-button,
+  .byte-button {
+    width: 100%;
+    min-width: 0;
+    padding: 14px 18px;
+  }
+
+  .hero-note {
+    justify-content: center;
+    margin-top: 22px;
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+
+  /* BYTE AREA: CENTERED WITHOUT CHANGING DESKTOP SIZE */
+
+  .hero-container > .byte-area {
+    position: relative;
+    width: 100%;
+    height: 410px;
+    min-height: 410px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    isolation: isolate;
+  }
+
+  .byte-area .byte-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 280px;
+    height: 280px;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+
+  /*
+    The rings are centered with negative margins.
+    Their animation transform can now rotate without
+    overwriting a translate(-50%, -50%) transform.
+  */
+
+  .byte-area .byte-ring,
+  .byte-area .byte-ring-outer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    margin: 0;
+    transform-origin: center center;
+    pointer-events: none;
+  }
+
+  .byte-area .byte-ring {
+    width: 270px;
+    height: 270px;
+    margin-top: -135px;
+    margin-left: -135px;
+    animation: byteRing 8s linear infinite;
+  }
+
+  .byte-area .byte-ring-outer {
+    width: 320px;
+    height: 320px;
+    margin-top: -160px;
+    margin-left: -160px;
+    animation: byteOuterRing 15s linear infinite;
+  }
+
+  .byte-area .byte-ring::before {
+    inset: 18px;
+  }
+
+  /*
+    Mobile sizing stays as in your latest CSS.
+    Desktop width, max-width, height and max-height remain unchanged.
+  */
+
+  .byte-area .byte-character {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+
+    display: block;
+    width: min(290px, 78vw);
+    height: auto;
+    max-height: 340px;
+
+    object-fit: contain;
+    opacity: 1;
+    visibility: visible;
+    z-index: 4;
+
+    animation:
+      byteFloat 4s ease-in-out infinite,
+      byteBreathing 5s ease-in-out infinite;
+  }
+
+  .byte-area .orbit-dot {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 7;
+  }
+
+  .byte-area .orbit-dot-1 {
+    animation: orbitOne 6s linear infinite;
+  }
+
+  .byte-area .orbit-dot-2 {
+    right: auto;
+    animation: orbitTwo 7s linear infinite;
+  }
+
+  .byte-area .orbit-dot-3 {
+    bottom: auto;
+    animation: orbitThree 8s linear infinite;
+  }
+
+  .byte-area .byte-hud {
+    display: flex;
+    position: absolute;
+    z-index: 12;
+    font-size: 7px;
+  }
+
+  .byte-area .hud-top {
+    top: 12%;
+    left: 0;
+  }
+
+  .byte-area .hud-bottom {
+    right: 0;
+    bottom: 12%;
+  }
+
+  .byte-area .byte-message {
+    display: flex;
+    top: 5%;
+    right: 0;
+    left: auto;
+    bottom: auto;
+
+    width: auto;
+    max-width: 165px;
+    padding: 11px 13px;
+
+    transform: none;
+    z-index: 15;
+    visibility: visible;
+    opacity: 1;
+    text-align: left;
+
+    animation: messageFloat 3.5s ease-in-out infinite;
+  }
+
+  .byte-area .byte-message strong {
+    font-size: 8px;
+  }
+
+  .byte-area .byte-message p {
+    font-size: 10px;
+    line-height: 1.4;
+  }
+
+  .byte-area .message-dot {
+    width: 6px;
+    height: 6px;
+  }
+
+  .floating-symbol {
+    display: none;
+  }
+
+  .particles span {
+    width: 2px;
+    height: 2px;
+  }
+
+  .particles span:nth-child(n + 7) {
+    display: none;
+  }
+
+  .cyber-line {
+    opacity: 0.15;
+  }
+
+  .cyber-line-1 {
+    width: 220px;
+    right: -120px;
+  }
+
+  .cyber-line-2 {
+    width: 200px;
+    left: -120px;
+  }
+
+  .scroll-indicator {
+    display: none;
+  }
+
+  .hero::before {
+    top: 15px;
+    left: 15px;
+    width: 45px;
+    height: 45px;
+  }
+
+  .hero::after {
+    right: 15px;
+    bottom: 15px;
+    width: 45px;
+    height: 45px;
+  }
+
+  .intro-section {
+    min-height: auto;
+    padding: 75px 20px;
+  }
+
+  .intro-content {
+    width: 100%;
+  }
+
+  .section-label {
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+
+  .intro-content h2 {
+    margin: 15px 0;
+    font-size: clamp(30px, 10vw, 45px);
+    line-height: 1.05;
+  }
+
+  .intro-content p {
+    font-size: 13px;
+    line-height: 1.75;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .hero {
+    margin-top: 68px;
+    padding: 45px 0 70px;
+  }
+
+  .hero-container {
+    width: calc(100% - 24px);
+    gap: 25px;
+  }
+
+  .hero h1 {
+    font-size: clamp(38px, 14vw, 54px);
+  }
+
+  .hero-eyebrow {
+    font-size: 8px;
+    letter-spacing: 1.5px;
+  }
+
+  .eyebrow-line {
+    width: 20px;
+  }
+
+  .hero-tagline {
+    font-size: 14px;
+  }
+
+  .hero-description {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .hero-buttons {
+    max-width: 270px;
+  }
+
+  .start-button,
+  .byte-button {
+    padding: 13px 15px;
+    font-size: 10px;
+  }
+
+  .hero-container > .byte-area {
+    height: 365px;
+    min-height: 365px;
+  }
+
+  .byte-area .byte-glow {
+    width: 235px;
+    height: 235px;
+  }
+
+  .byte-area .byte-ring {
+    width: 235px;
+    height: 235px;
+    margin-top: -117.5px;
+    margin-left: -117.5px;
+  }
+
+  .byte-area .byte-ring-outer {
+    width: 275px;
+    height: 275px;
+    margin-top: -137.5px;
+    margin-left: -137.5px;
+  }
+
+  .byte-area .byte-character {
+    width: min(255px, 76vw);
+    max-height: 290px;
+  }
+
+  .byte-area .byte-message {
+    max-width: 145px;
+    padding: 9px 11px;
+  }
+
+  .byte-area .byte-message strong {
+    font-size: 7px;
+  }
+
+  .byte-area .byte-message p {
+    font-size: 9px;
+  }
+
+  .byte-area .byte-hud {
+    font-size: 6px;
+    letter-spacing: 0.5px;
+    padding: 6px;
+  }
+
+  .intro-section {
+    padding: 65px 18px;
+  }
+
+  .intro-content h2 {
+    font-size: 30px;
+  }
+
+  .intro-content p {
+    font-size: 12px;
+  }
+
+  .hero::before,
+  .hero::after {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+  .hero-container {
+    width: calc(100% - 20px);
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero-tagline {
+    font-size: 13px;
+  }
+
+  .hero-description {
+    font-size: 11px;
+  }
+
+  .hero-buttons {
+    max-width: 250px;
+  }
+
+  .hero-container > .byte-area {
+    height: 330px;
+    min-height: 330px;
+  }
+
+  .byte-area .byte-glow {
+    width: 200px;
+    height: 200px;
+  }
+
+  .byte-area .byte-ring {
+    width: 205px;
+    height: 205px;
+    margin-top: -102.5px;
+    margin-left: -102.5px;
+  }
+
+  .byte-area .byte-ring-outer {
+    width: 240px;
+    height: 240px;
+    margin-top: -120px;
+    margin-left: -120px;
+  }
+
+  .byte-area .byte-character {
+    width: 225px;
+    max-height: 270px;
+  }
+
+  .byte-area .byte-message {
+    max-width: 135px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero *,
+  .hero *::before,
+  .hero *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}

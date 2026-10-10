@@ -1,0 +1,33 @@
+
+/* Hide the default cursor on desktop */
+body.byte-cursor-enabled,
+body.byte-cursor-enabled * {
+  cursor: none !important;
+}
+
+/* BYTE follows the mouse */
+.byte-custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 58px;
+  height: 58px;
+
+  object-fit: contain;
+
+  pointer-events: none;
+  user-select: none;
+
+  z-index: 99999;
+
+  transform: translate3d(-100px, -100px, 0);
+  will-change: transform;
+}
+
+/* Keep the normal touch experience on mobile */
+@media (hover: none), (pointer: coarse) {
+  .byte-custom-cursor {
+    display: none;
+  }
+}

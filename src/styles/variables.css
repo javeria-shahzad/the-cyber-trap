@@ -1,0 +1,44 @@
+:root {
+  /* =========================
+     THE CYBER TRAP COLORS
+  ========================== */
+
+  --color-bg: #0b1020;
+  --color-bg-secondary: #11182d;
+
+  --color-blue: #19bfff;
+  --color-orange: #ff7a00;
+  --color-green: #54d68a;
+
+  --color-white: #f5f7fa;
+  --color-text: #c9d2e3;
+  --color-muted: #7f8ba3;
+
+  /* =========================
+     BORDERS
+  ========================== */
+
+  --border-blue: rgba(25, 191, 255, 0.35);
+  --border-orange: rgba(255, 122, 0, 0.35);
+
+  /* =========================
+     EFFECTS
+  ========================== */
+
+  --shadow-blue: 0 0 25px rgba(25, 191, 255, 0.18);
+  --shadow-orange: 0 0 25px rgba(255, 122, 0, 0.18);
+
+  /* =========================
+     BORDER RADIUS
+  ========================== */
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+
+  /* =========================
+     TRANSITIONS
+  ========================== */
+
+  --transition: 0.25s ease;
+}

@@ -1,0 +1,364 @@
+.meet-byte-page {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: #0b1020;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 100px 7%;
+}
+
+.meet-byte-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(25, 191, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(25, 191, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  mask-image: linear-gradient(to bottom, black, transparent);
+  pointer-events: none;
+}
+
+.meet-byte-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  left: 5%;
+  top: 10%;
+  background: rgba(25, 191, 255, 0.12);
+  filter: blur(100px);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.meet-byte-content {
+  position: relative;
+  z-index: 2;
+  width: min(1200px, 100%);
+  margin: auto;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 80px;
+}
+
+.meet-byte-image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+}
+
+.byte-circle {
+  position: absolute;
+  width: 390px;
+  height: 390px;
+  border: 1px solid rgba(25, 191, 255, 0.35);
+  border-radius: 50%;
+  box-shadow:
+    0 0 40px rgba(25, 191, 255, 0.15),
+    inset 0 0 40px rgba(25, 191, 255, 0.08);
+  animation: rotateByteCircle 12s linear infinite;
+}
+
+.byte-circle::before,
+.byte-circle::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #19bfff;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #19bfff;
+}
+
+.byte-circle::before {
+  top: 25px;
+  left: 70px;
+}
+
+.byte-circle::after {
+  right: 40px;
+  bottom: 80px;
+}
+
+.meet-byte-image img {
+  position: relative;
+  z-index: 2;
+  width: 330px;
+  max-width: 85%;
+  filter: drop-shadow(0 0 25px rgba(25, 191, 255, 0.3));
+  animation: floatByte 4s ease-in-out infinite;
+}
+
+.meet-byte-text {
+  max-width: 650px;
+}
+
+.byte-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #19bfff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
+
+.byte-label::before {
+  content: "";
+  width: 35px;
+  height: 2px;
+  background: #19bfff;
+  box-shadow: 0 0 10px #19bfff;
+}
+
+.meet-byte-text h1 {
+  margin: 0;
+  font-size: clamp(42px, 6vw, 76px);
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: -2px;
+}
+
+.meet-byte-text h1 span {
+  color: #19bfff;
+  text-shadow: 0 0 25px rgba(25, 191, 255, 0.35);
+}
+
+.meet-byte-text h2 {
+  margin: 18px 0 25px;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.byte-speech {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 20px 22px;
+  margin-bottom: 30px;
+  border-left: 3px solid #f6623d;
+  background: rgba(255, 255, 255, 0.035);
+  border-radius: 0 12px 12px 0;
+}
+
+.speech-dot {
+  width: 9px;
+  height: 9px;
+  margin-top: 7px;
+  flex-shrink: 0;
+  background: #f6623d;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #f6623d;
+  animation: pulseDot 1.5s infinite;
+}
+
+.byte-speech p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.byte-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 35px;
+}
+
+.byte-card {
+  padding: 20px 16px;
+  min-height: 135px;
+  border: 1px solid rgba(25, 191, 255, 0.12);
+  background: rgba(255, 255, 255, 0.035);
+  border-radius: 14px;
+  transition: all 0.3s ease;
+}
+
+.byte-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(25, 191, 255, 0.5);
+  background: rgba(25, 191, 255, 0.06);
+  box-shadow: 0 15px 35px rgba(25, 191, 255, 0.1);
+}
+
+.byte-card-icon {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.byte-card h3 {
+  margin: 0 0 5px;
+  color: white;
+  font-size: 18px;
+}
+
+.byte-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* .back-home-button {
+  display: inline-flex;
+  padding: 13px 22px;
+  color: rgba(25, 191, 255, 0.5);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  border: 1px solid rgba(25, 191, 255, 0.3);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.back-home-button:hover {
+  color: #19bfff;
+  border-color: #19bfff;
+  box-shadow: 0 0 20px rgba(25, 191, 255, 0.15);
+} */
+.back-home-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 13px 23px;
+
+  border: 1px solid rgba(25, 191, 255, 0.65);
+
+  border-radius: 10px;
+
+  background: rgba(25, 191, 255, 0.03);
+
+  color: #19bfff;
+
+  text-decoration: none;
+
+  font-family: "Orbitron", sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  transition:
+    background 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.back-home-button:hover {
+   background: rgba(25, 191, 255, 0.1);
+
+  box-shadow:
+    0 0 20px rgba(25, 191, 255, 0.2);
+
+  transform: translateY(-3px);
+}
+
+@keyframes floatByte {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes rotateByteCircle {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulseDot {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.4;
+    transform: scale(0.7);
+  }
+}
+
+@media (max-width: 900px) {
+  .meet-byte-page {
+    padding: 100px 6% 60px;
+  }
+
+  .meet-byte-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .meet-byte-image {
+    min-height: 380px;
+  }
+
+  .byte-circle {
+    width: 300px;
+    height: 300px;
+  }
+
+  .meet-byte-image img {
+    width: 260px;
+  }
+
+  .byte-label {
+    justify-content: center;
+  }
+
+  .byte-speech {
+    text-align: left;
+  }
+
+  .byte-cards {
+    text-align: left;
+  }
+
+  .back-home-button {
+    margin: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .byte-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .meet-byte-image {
+    min-height: 320px;
+  }
+
+  .byte-circle {
+    width: 250px;
+    height: 250px;
+  }
+
+  .meet-byte-image img {
+    width: 220px;
+  }
+
+  .meet-byte-text h1 {
+    font-size: 42px;
+  }
+}

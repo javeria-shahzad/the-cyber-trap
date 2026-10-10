@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-white);
+  font-family: 'Inter', sans-serif;
+  min-width: 320px;
+}
+
+button,
+a {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+
+
+
+/* body { cursor: none; } .cursor-character { position: fixed; width: 60px; height: 60px; object-fit: contain; pointer-events: none; z-index: 999999; transform: translate(-50%, -50%); transition: left 0.08s linear, top 0.08s linear; animation: byteFloat 1.5s ease-in-out infinite; } @keyframes byteFloat { 0%, 100% { margin-top: 0; } 50% { margin-top: -6px; } } @media (max-width: 768px) { body { cursor: auto; } .cursor-character { display: none; } } */
