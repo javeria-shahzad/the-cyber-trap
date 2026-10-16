@@ -120,6 +120,7 @@ function Navbar() {
   <span>SAFETY</span>
 </NavLink> */}
 
+
 {/* DESKTOP SAFETY BUTTON — NOT CLICKABLE */}
 <div className="safety-button" aria-disabled="true">
   <Shield size={18} strokeWidth={2} />

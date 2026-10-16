@@ -265,6 +265,7 @@ const handleBackToAllMissions = () => {
   type="button"
   onClick={handleBackToAllMissions}
 >
+  
   <ArrowLeft size={17} />
   BACK TO ALL MISSIONS
 </button>

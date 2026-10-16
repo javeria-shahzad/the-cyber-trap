@@ -14,6 +14,7 @@ import {
   Star,
 } from "lucide-react";
 
+
 import byteThinking from "../assets/thinking.png";
 import byteCurious from "../assets/curious.png";
 import byteWorried from "../assets/worried.png";

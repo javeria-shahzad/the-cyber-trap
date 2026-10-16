@@ -1,0 +1,653 @@
+/* =========================================================
+   THE CYBER TRAP — PREMIUM TEAL GLASS NAVBAR
+   Theme: Dark Teal + Mint + Orange
+========================================================= */
+
+@import "./home.css";
+
+/* =========================================================
+   MAIN NAVBAR
+========================================================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 86px;
+  z-index: 1000;
+  box-sizing: border-box;
+
+  background: rgba(16, 27, 27, 0.94);
+  border-bottom: 1px solid rgba(24, 177, 163, 0.22);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.16);
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.navbar-container {
+  position: relative;
+  width: min(1400px, calc(100% - 64px));
+  height: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  height: 100%;
+  flex-shrink: 0;
+
+  text-decoration: none;
+  color: #F5F7FA;
+}
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.brand-logo-box {
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+  overflow: hidden;
+
+  background: transparent;
+}
+
+.brand-logo {
+  width: 64px;
+  height: 64px;
+
+  display: block;
+  object-fit: contain;
+  background: transparent;
+
+  transform: scale(1.08);
+
+  filter: drop-shadow(0 0 8px rgba(24, 177, 163, 0.30));
+}
+
+/* =========================================================
+   WEBSITE NAME
+========================================================= */
+
+.brand-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.brand-name > span {
+  color: #A8C5C1;
+
+  font-family: "Orbitron", sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 3px;
+
+  margin-bottom: 5px;
+}
+
+.brand-name strong {
+  color: #F5F7FA;
+
+  font-family: "Orbitron", sans-serif;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: 1px;
+
+  white-space: nowrap;
+}
+
+.brand-name .brand-cyber {
+  color: #35D1C0;
+  text-shadow: 0 0 12px rgba(24, 177, 163, 0.20);
+}
+
+/* =========================================================
+   NAVIGATION CONTAINER
+========================================================= */
+
+.nav-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  height: 86px;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   GLASS NAVIGATION LINKS
+========================================================= */
+
+.nav-link {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 42px;
+  padding: 0 15px;
+
+  box-sizing: border-box;
+  border: 1px solid rgba(24, 177, 163, 0.10);
+  border-radius: 10px;
+
+  background: rgba(24, 177, 163, 0.045);
+  color: #D8E7E4;
+
+  text-decoration: none;
+
+  font-family: "Orbitron", sans-serif;
+  font-size: 12px;
+  font-weight: 650;
+  letter-spacing: 0.5px;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.045),
+    0 4px 12px rgba(0, 0, 0, 0.12);
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* =========================================================
+   HOVER EFFECT
+========================================================= */
+
+.nav-link:hover {
+  color: #35D1C0;
+
+  background: rgba(24, 177, 163, 0.12);
+  border-color: rgba(53, 209, 192, 0.35);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 0 16px rgba(24, 177, 163, 0.10),
+    0 5px 15px rgba(0, 0, 0, 0.18);
+
+  text-shadow: 0 0 8px rgba(53, 209, 192, 0.25);
+
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   ACTIVE LINK
+========================================================= */
+
+.nav-link.active {
+  color: #35D1C0;
+
+  background: rgba(24, 177, 163, 0.14);
+  border-color: rgba(53, 209, 192, 0.38);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 0 16px rgba(24, 177, 163, 0.09);
+
+  text-shadow: 0 0 8px rgba(53, 209, 192, 0.25);
+}
+
+/* =========================================================
+   ACTIVE UNDERLINE
+========================================================= */
+
+.nav-link::after {
+  content: "";
+
+  position: absolute;
+  left: 50%;
+  bottom: 3px;
+
+  width: 0;
+  height: 2px;
+
+  transform: translateX(-50%);
+
+  background: #35D1C0;
+  border-radius: 10px;
+
+  box-shadow: 0 0 8px rgba(53, 209, 192, 0.65);
+
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 45%;
+}
+
+/* =========================================================
+   SAFETY HUB — NON-CLICKABLE GLASS BUTTON
+========================================================= */
+
+.safety-button {
+  margin-left: auto;
+
+  width: 118px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(24, 177, 163, 0.18);
+  border-radius: 10px;
+
+  background: rgba(24, 177, 163, 0.055);
+  color: #D8E7E4;
+
+  font-family: "Orbitron", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.045),
+    0 4px 12px rgba(0, 0, 0, 0.12);
+
+  cursor: default;
+  user-select: none;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.safety-button svg {
+  color: #35D1C0;
+  filter: drop-shadow(0 0 5px rgba(24, 177, 163, 0.35));
+
+  transition: transform 0.25s ease;
+}
+
+.safety-button:hover {
+  color: #35D1C0;
+
+  background: rgba(24, 177, 163, 0.11);
+  border-color: rgba(53, 209, 192, 0.32);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.07),
+    0 0 14px rgba(24, 177, 163, 0.09);
+}
+
+.safety-button:hover svg {
+  transform: scale(1.08);
+}
+
+/* =========================================================
+   HAMBURGER BUTTON
+========================================================= */
+
+.hamburger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+  margin-left: auto;
+  padding: 0;
+
+  flex-shrink: 0;
+
+  color: #35D1C0;
+  background: rgba(24, 177, 163, 0.08);
+
+  border: 1px solid rgba(53, 209, 192, 0.32);
+  border-radius: 9px;
+
+  cursor: pointer;
+  z-index: 1002;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.hamburger:hover {
+  background: rgba(24, 177, 163, 0.16);
+  border-color: rgba(53, 209, 192, 0.55);
+
+  box-shadow: 0 0 14px rgba(24, 177, 163, 0.12);
+}
+
+.mobile-safety-link {
+  display: none;
+}
+
+/* =========================================================
+   LARGE TABLETS
+========================================================= */
+
+@media (max-width: 1200px) {
+  .navbar-container {
+    width: calc(100% - 40px);
+  }
+
+  .nav-links {
+    gap: 9px;
+  }
+
+  .nav-link {
+    padding: 0 11px;
+    font-size: 11px;
+  }
+
+  .brand-name strong {
+    font-size: 17px;
+  }
+}
+
+/* =========================================================
+   TABLETS
+========================================================= */
+
+@media (max-width: 1050px) {
+  .navbar {
+    height: 80px;
+  }
+
+  .navbar-container {
+    width: calc(100% - 30px);
+  }
+
+  .nav-links {
+    height: 80px;
+    gap: 5px;
+  }
+
+  .nav-link {
+    height: 40px;
+    padding: 0 8px;
+    font-size: 10px;
+    letter-spacing: 0.2px;
+  }
+
+  .nav-link::after {
+    bottom: 2px;
+  }
+
+  .brand {
+    gap: 7px;
+  }
+
+  .brand-logo-box {
+    width: 46px;
+    height: 46px;
+  }
+
+  .brand-logo {
+    width: 54px;
+    height: 54px;
+  }
+
+  .brand-name > span {
+    font-size: 7px;
+    letter-spacing: 2px;
+  }
+
+  .brand-name strong {
+    font-size: 14px;
+  }
+
+  .safety-button {
+    width: 88px;
+    height: 40px;
+    gap: 5px;
+    font-size: 9px;
+    letter-spacing: 0.4px;
+  }
+}
+
+/* =========================================================
+   MOBILE NAVBAR
+========================================================= */
+
+@media (max-width: 760px) {
+  .navbar {
+    height: 70px;
+  }
+
+  .navbar-container {
+    position: relative;
+    width: calc(100% - 24px);
+  }
+
+  .brand-logo-box {
+    width: 42px;
+    height: 42px;
+  }
+
+  .brand-logo {
+    width: 46px;
+    height: 46px;
+  }
+
+  .brand-name > span {
+    font-size: 6px;
+    letter-spacing: 2px;
+    margin-bottom: 4px;
+  }
+
+  .brand-name strong {
+    font-size: 13px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .safety-button {
+    display: none;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 62px;
+    left: auto;
+    right: 0;
+
+    transform: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 5px;
+
+    width: min(290px, calc(100vw - 24px));
+    height: auto;
+
+    max-height: calc(100vh - 90px);
+    overflow-y: auto;
+
+    padding: 12px;
+
+    box-sizing: border-box;
+
+    background: rgba(16, 27, 27, 0.98);
+    border: 1px solid rgba(24, 177, 163, 0.30);
+    border-radius: 12px;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+      0 12px 35px rgba(0, 0, 0, 0.40),
+      0 0 18px rgba(24, 177, 163, 0.055);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+      opacity 0.2s ease,
+      visibility 0.2s ease;
+
+    z-index: 1001;
+  }
+
+  .nav-links.mobile-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 100%;
+    min-height: 46px;
+    height: auto;
+
+    padding: 12px;
+
+    box-sizing: border-box;
+    border: 1px solid rgba(24, 177, 163, 0.10);
+    border-radius: 8px;
+
+    background: rgba(24, 177, 163, 0.045);
+
+    font-size: 12px;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    background: rgba(24, 177, 163, 0.12);
+    border-color: rgba(53, 209, 192, 0.30);
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  .mobile-safety-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    min-height: 44px;
+    margin-top: 8px;
+
+    box-sizing: border-box;
+
+    color: #35D1C0;
+    background: rgba(24, 177, 163, 0.07);
+
+    border: 1px solid rgba(53, 209, 192, 0.30);
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    transition:
+      background 0.25s ease,
+      border-color 0.25s ease;
+  }
+
+  .mobile-safety-link:hover {
+    background: rgba(24, 177, 163, 0.15);
+    border-color: rgba(53, 209, 192, 0.5);
+  }
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 400px) {
+  .navbar-container {
+    width: calc(100% - 18px);
+  }
+
+  .brand {
+    gap: 5px;
+  }
+
+  .brand-name strong {
+    font-size: 11px;
+  }
+
+  .brand-name > span {
+    font-size: 5px;
+    letter-spacing: 1.5px;
+  }
+
+  .hamburger {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-link,
+  .nav-link::after,
+  .safety-button,
+  .safety-button svg,
+  .hamburger,
+  .nav-links,
+  .mobile-safety-link {
+    transition: none;
+  }
+}

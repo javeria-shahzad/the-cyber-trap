@@ -2,8 +2,11 @@ import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import LoadingScreen from "./components/LoadingScreen";
-import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
+// import Navbar from "./components/Navbar";
+import Navbar from "./components/NavbarV2";
+// import Home from "./pages/Home";
+import HomeV2 from "./pages/HomeV2";
+// import HomeV3 from "./pages/HomeV3";
 import SafetyHub from "./pages/SafetyHub";
 import MeetByte from "./components/MeetByte";
 import ParentsTeachers from "./pages/ParentsTeachers";
@@ -39,7 +42,9 @@ return (
     <ByteCursor />
 
     <Routes>
-      <Route path="/" element={<Home />} />
+      {/* <Route path="/" element={<Home />} /> */}
+<Route path="/" element={<HomeV2 />} />
+{/* <Route path="/" element={<HomeV3 />} /> */}
       <Route path="/safety-hub" element={<SafetyHub />} />
       <Route path="/meet-byte" element={<MeetByte />} />
       <Route

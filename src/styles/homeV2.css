@@ -1,0 +1,228 @@
+
+@import "./home.css";
+
+/* Main background */
+.home-v2 {
+  background: #101B1B;
+}
+
+.home-v2 .hero {
+  background:
+    radial-gradient(
+      circle at 72% 48%,
+      rgba(24, 177, 163, 0.20),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 20% 70%,
+      rgba(255, 151, 58, 0.12),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(239, 119, 151, 0.08),
+      transparent 25%
+    ),
+    #101B1B;
+}
+
+/* Background grid */
+.home-v2 .hero-grid {
+  background-image:
+    linear-gradient(rgba(24, 177, 163, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(24, 177, 163, 0.08) 1px, transparent 1px);
+}
+
+/* Teal and orange ambient glow */
+.home-v2 .hero-glow-blue {
+  background: rgba(24, 177, 163, 0.20);
+}
+
+.home-v2 .hero-glow-orange {
+  background: rgba(255, 151, 58, 0.14);
+}
+
+/* Scan line */
+.home-v2 .scan-line {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(24, 177, 163, 0.4),
+    #18B1A3,
+    #FF973A,
+    rgba(24, 177, 163, 0.4),
+    transparent
+  );
+
+  box-shadow: 0 0 15px rgba(24, 177, 163, 0.45);
+}
+
+/* Particles and decorative lines */
+.home-v2 .particles span {
+  background: #18B1A3;
+  box-shadow: 0 0 8px rgba(24, 177, 163, 0.75);
+}
+
+.home-v2 .cyber-line {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(24, 177, 163, 0.65),
+    rgba(255, 151, 58, 0.5),
+    transparent
+  );
+}
+
+/* Main heading */
+.home-v2 .hero-eyebrow,
+.home-v2 .hero h1 span,
+.home-v2 .byte-message strong {
+  color: #35D1C0;
+}
+
+.home-v2 .eyebrow-line {
+  background: #18B1A3;
+  box-shadow: 0 0 8px rgba(24, 177, 163, 0.75);
+}
+
+.home-v2 .hero h1 span {
+  text-shadow: 0 0 18px rgba(24, 177, 163, 0.28);
+}
+
+/* Primary button — orange */
+.home-v2 .start-button {
+  background: #FF973A;
+  color: #21150D;
+  box-shadow: 0 0 20px rgba(255, 151, 58, 0.22);
+}
+
+.home-v2 .start-button:hover {
+  box-shadow: 0 0 30px rgba(255, 151, 58, 0.45);
+}
+
+/* Secondary button — teal */
+.home-v2 .byte-button {
+  border-color: rgba(53, 209, 192, 0.7);
+  background: rgba(24, 177, 163, 0.06);
+  color: #8AE9DE;
+}
+
+.home-v2 .byte-button:hover {
+  background: rgba(24, 177, 163, 0.14);
+  box-shadow: 0 0 20px rgba(24, 177, 163, 0.2);
+}
+
+/* BYTE character effects */
+.home-v2 .byte-glow {
+  background: radial-gradient(
+    circle,
+    rgba(24, 177, 163, 0.24),
+    rgba(255, 151, 58, 0.08) 45%,
+    transparent 70%
+  );
+}
+
+.home-v2 .byte-ring {
+  border-color: rgba(24, 177, 163, 0.3);
+  box-shadow: 0 0 50px rgba(24, 177, 163, 0.08);
+}
+
+.home-v2 .byte-ring::before {
+  border-color: rgba(255, 151, 58, 0.24);
+}
+
+.home-v2 .byte-ring-outer {
+  border-color: rgba(239, 119, 151, 0.3);
+}
+
+.home-v2 .byte-character {
+  filter: drop-shadow(0 0 25px rgba(24, 177, 163, 0.25));
+}
+
+/* Floating icons */
+.home-v2 .floating-symbol {
+  border-color: rgba(24, 177, 163, 0.3);
+  background: rgba(24, 177, 163, 0.07);
+  color: #8AE9DE;
+}
+
+.home-v2 .symbol-4 {
+  color: #C08BD1;
+  border-color: rgba(192, 139, 209, 0.3);
+}
+
+.home-v2 .symbol-5 {
+  color: #EF7797;
+  border-color: rgba(239, 119, 151, 0.3);
+}
+
+/* Orbit dots */
+.home-v2 .orbit-dot {
+  background: #35D1C0;
+  box-shadow: 0 0 10px rgba(53, 209, 192, 0.85);
+}
+
+.home-v2 .orbit-dot-2 {
+  background: #FF973A;
+  box-shadow: 0 0 10px rgba(255, 151, 58, 0.8);
+}
+
+/* BYTE message */
+.home-v2 .byte-message {
+  border-color: rgba(24, 177, 163, 0.35);
+}
+
+.home-v2 .message-dot {
+  background: #EF7797;
+  box-shadow: 0 0 8px rgba(239, 119, 151, 0.65);
+}
+
+/* HUD */
+.home-v2 .byte-hud {
+  border-left-color: #18B1A3;
+}
+
+.home-v2 .hud-bottom {
+  border-left: none;
+  border-right-color: #FF973A;
+}
+
+/* Scroll indicator */
+.home-v2 .scroll-line {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #35D1C0,
+    #FF973A,
+    transparent
+  );
+}
+
+/* Corner decorations */
+.home-v2 .hero::before {
+  border-color: rgba(24, 177, 163, 0.45);
+}
+
+.home-v2 .hero::after {
+  border-color: rgba(255, 151, 58, 0.45);
+}
+
+/* Intro section */
+.home-v2 .intro-section {
+  background: #0B1313;
+  border-top-color: rgba(24, 177, 163, 0.18);
+}
+
+.home-v2 .section-label {
+  color: #EF7797;
+}
+
+.home-v2 .intro-content h2 span {
+  color: #35D1C0;
+}
+
+/* Keep green status indicators green */
+.home-v2 .note-dot,
+.home-v2 .hud-dot {
+  background: #54D68A;
+}

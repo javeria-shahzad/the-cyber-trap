@@ -15,6 +15,7 @@ import byteScared from "../assets/scared.png";
 import byteHappy from "../assets/happy.png";
 import byteWink from "../assets/wink.png";
 
+
 const traps = [
   {
     icon: byteExcited,

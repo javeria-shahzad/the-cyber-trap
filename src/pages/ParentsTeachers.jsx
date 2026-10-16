@@ -15,6 +15,7 @@ import byteCheering from "../assets/cheering.png";
 // import byteHappy from "../assets/happy";
 // import byteWink from "../assets/wink";
 
+
 const sections = [
   {
     number: "01",
