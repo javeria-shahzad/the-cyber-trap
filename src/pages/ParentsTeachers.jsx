@@ -5,11 +5,11 @@ import "../styles/ParentsTeachers.css";
 import byteThinking from "../assets/thinking.png";
 import byteWorried from "../assets/worried.png";
 import byteWarning from "../assets/warning.png";
-import byteCurious from "../assets/curious.png";
+// import byteCurious from "../assets/curious.png";
 import byteProud from "../assets/proud.png";
 import byteCheering from "../assets/cheering.png";
 // import byteAngry from "../assets/angry";
-// import byteConfuse from "../assets/confuse";
+import byteConfuse from "../assets/confused.png";
 // import byteExcited from "../assets/excited";
 // import byteScared from "../assets/scared";
 // import byteHappy from "../assets/happy";
@@ -45,7 +45,7 @@ const sections = [
     number: "03",
     title: "HOW TO START A CONVERSATION",
     icon: "💬",
-    byte: byteCurious,
+    byte: byteConfuse,
     points: [
       "Ask open questions instead of immediately blaming or judging.",
       "Let children explain what happened in their own words.",

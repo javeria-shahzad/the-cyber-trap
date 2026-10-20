@@ -14,9 +14,9 @@ import {
   Star,
 } from "lucide-react";
 
-
+import byteConfuse from "../assets/confused.png";
 import byteThinking from "../assets/thinking.png";
-import byteCurious from "../assets/curious.png";
+// import byteCurious from "../assets/curious.png";
 import byteWorried from "../assets/worried.png";
 import byteWarning from "../assets/warning.png";
 import byteProud from "../assets/proud.png";
@@ -31,7 +31,7 @@ const levels = [
     title: "THE FAKE REWARD",
     description: "Can you spot a reward that is too good to be true?",
     icon: Gift,
-    character: byteCurious,
+    character: byteConfuse,
     color: "cyan",
     difficulty: "BEGINNER",
     path: "/level-01",

@@ -3,7 +3,8 @@ import "../styles/About.css";
 
 import byteCheering from "../assets/cheering.png";
 import byteThinking from "../assets/thinking.png";
-import byteCurious from "../assets/curious.png";
+import byteConfuse from "../assets/confused.png";
+// import byteCurious from "../assets/curious.png";
 import byteProud from "../assets/proud.png";
 
 const About = () => {
@@ -180,7 +181,7 @@ const About = () => {
 
         <div className="about-discover-character">
           <img
-            src={byteCurious}
+            src={byteConfuse}
             alt="BYTE curious"
           />
         </div>

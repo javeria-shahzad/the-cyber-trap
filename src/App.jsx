@@ -2,11 +2,12 @@ import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import LoadingScreen from "./components/LoadingScreen";
-// import Navbar from "./components/Navbar";
-import Navbar from "./components/NavbarV2";
+import Navbar from "./components/Navbar";
+// import Navbar from "./components/NavbarV2";
 // import Home from "./pages/Home";
-import HomeV2 from "./pages/HomeV2";
+// import HomeV2 from "./pages/HomeV2";
 // import HomeV3 from "./pages/HomeV3";
+import HomeV4 from "./pages/HomeV4";
 import SafetyHub from "./pages/SafetyHub";
 import MeetByte from "./components/MeetByte";
 import ParentsTeachers from "./pages/ParentsTeachers";
@@ -34,34 +35,30 @@ function App() {
     return <LoadingScreen />;
   }
 
-  
-return (
-  <BrowserRouter>
-    <Navbar />
+  return (
+    <BrowserRouter>
+      <Navbar />
 
-    <ByteCursor />
+      <ByteCursor />
 
-    <Routes>
-      {/* <Route path="/" element={<Home />} /> */}
-<Route path="/" element={<HomeV2 />} />
-{/* <Route path="/" element={<HomeV3 />} /> */}
-      <Route path="/safety-hub" element={<SafetyHub />} />
-      <Route path="/meet-byte" element={<MeetByte />} />
-      <Route
-        path="/parents-teachers"
-        element={<ParentsTeachers />}
-      />
-      <Route path="/about" element={<About />} />
-      <Route path="/play" element={<Play />} />
-      <Route path="/level-01" element={<Level01 />} />
-      <Route path="/level-02" element={<Level02 />} />
-      <Route path="/level-03" element={<Level03 />} />
-      <Route path="/level-04" element={<Level04 />} />
-      <Route path="/level-05" element={<Level05 />} />
-    </Routes>
-  </BrowserRouter>
-);
-
+      <Routes>
+        {/* <Route path="/" element={<Home />} /> */}
+        {/* <Route path="/" element={<HomeV2 />} /> */}
+        {/* <Route path="/" element={<HomeV3 />} /> */}
+        <Route path="/" element={<HomeV4/>} />
+        <Route path="/safety-hub" element={<SafetyHub />} />
+        <Route path="/meet-byte" element={<MeetByte />} />
+        <Route path="/parents-teachers" element={<ParentsTeachers />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/play" element={<Play />} />
+        <Route path="/level-01" element={<Level01 />} />
+        <Route path="/level-02" element={<Level02 />} />
+        <Route path="/level-03" element={<Level03 />} />
+        <Route path="/level-04" element={<Level04 />} />
+        <Route path="/level-05" element={<Level05 />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;

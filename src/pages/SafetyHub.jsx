@@ -5,11 +5,12 @@ import "../styles/SafetyHub.css";
 import byteThinking from "../assets/thinking.png";
 import byteWorried from "../assets/worried.png";
 import byteWarning from "../assets/warning.png";
-import byteCurious from "../assets/curious.png";
+// import byteCurious from "../assets/curious.png";
+
 import byteProud from "../assets/proud.png";
 import byteCheering from "../assets/cheering.png";
 import byteAngry from "../assets/angry.png";
-import byteConfuse from "../assets/confuse.png";
+import byteConfuse from "../assets/confused.png";
 import byteExcited from "../assets/excited.png";
 import byteScared from "../assets/scared.png";
 import byteHappy from "../assets/happy.png";
@@ -149,7 +150,7 @@ function SafetyHub() {
 
         <div className="safety-hero-content">
           <div className="hero-byte">
-            <img src={byteCurious} alt="Byte curious" />
+            <img src={byteConfuse} alt="Byte curious" />
           </div>
 
           <div className="safety-badge">

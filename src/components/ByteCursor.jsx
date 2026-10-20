@@ -2,7 +2,7 @@
 import { useEffect, useRef } from "react";
 // import byte from "../assets/byte.png";
 import "../styles/byteCursor.css";
-import byte from "../assets/byteByte.png";
+import byte from "../assets/byte.png";
 function ByteCursor() {
   const byteRef = useRef(null);
 

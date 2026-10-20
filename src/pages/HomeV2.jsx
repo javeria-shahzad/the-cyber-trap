@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 // import byte from "../assets/byte.png";
 import "../styles/homeV2.css";
 // import byteThinking from "../assets/thinking.png";
-import byte from "../assets/byteByte.png";
+import byte from "../assets/byte.png";
 
 function Home() { const navigate = useNavigate();
   return (
